@@ -29,8 +29,9 @@ func tambahPasien(l []Pasien) *Pasien {
 	isValidTingkat := P.tingkat == "ringan" || P.tingkat == "sedang" || P.tingkat == "berat"
 
 	if P == (Pasien{}) || !isValidTingkat {
+    P = Pasien{}
 		fmt.Println("\n[!] Data tidak terpenuhi atau salah, ulangi lagi.")
-		tambahPasien(l)
+    return tambahPasien(l)
 	}
 	fmt.Printf("\n[v] Pasien '%s' berhasil ditambahkan!\n", P.nama)
 	return &P
