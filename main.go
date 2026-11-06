@@ -30,7 +30,6 @@ func tambahPasien(l []Pasien) *Pasien {
 
 	if P == (Pasien{}) || !isValidTingkat {
 		fmt.Println("\n[!] Data tidak terpenuhi atau salah, ulangi lagi.")
-		P = Pasien{}
 		tambahPasien(l)
 	}
 	fmt.Printf("\n[v] Pasien '%s' berhasil ditambahkan!\n", P.nama)
@@ -48,10 +47,9 @@ func cariPasien(listPasien []Pasien) {
 			fmt.Println("---------------------------------------")
 			fmt.Printf("Antrian : %d\n", v.antrian)
 			fmt.Printf("Nama    : %s\n", v.nama)
-		} else {
-			fmt.Println("[x] Pasien tidak ada")
 		}
 	}
+
 	fmt.Println("=======================================")
 }
 
